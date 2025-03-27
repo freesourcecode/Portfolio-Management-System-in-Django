@@ -1,0 +1,28 @@
+.footer {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(186, 216, 218, 0.95);
+    color: black;
+    text-align: center;
+    #margin-top: -2px;
+     bottom: 0px;
+}
+
+
+.jumbotron {
+    background-color: rgba(186, 216, 218, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+} 
+
+.tb-color{
+    background-color: mediumslateblue;
+}
+
+table{
+    color:black;
+}
+.tb-jumbotron{
+    background-color: #4e4b4b;
+}

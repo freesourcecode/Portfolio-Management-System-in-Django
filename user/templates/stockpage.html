@@ -1,0 +1,33 @@
+{% include "navbar.html" %}
+{% for p in Stocks %}
+<form action="{% url 'addStock' p.id %}" method="POST">{% csrf_token %}
+  <div class="row">
+    <div class="card w-75 col-md-6">
+      <div class="card-body"
+        style="background-color:rgba(186, 216, 218, 0.8);position:relative;padding: 2px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width:600px;top: 50%;left: 10%;">
+        <h3 class="card-title" style="text-align: center;"><b>{{p.name}}</b></h3>
+        <hr>
+        <div class="col-md-6">
+          <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>open:</strong> {{p.open}}</p>
+          <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>high:</strong> {{p.high}}</p>
+
+        </div>
+        <div class="col-md-6">
+          <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>low:</strong> {{p.low}}</p>
+          <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>close:</strong> {{p.close}}</p>
+        </div></br>
+        <p style="margin-left: 53px;font-size:24px" class="card-text"><strong>Quantity:</strong>
+          <input type="number" required name="qts" min="1" max="10"></p>
+        <p style="margin-left: 53px;font-size:24px" class="card-text"><strong>Value:</strong> {{p.close}}</p>
+        <input type="submit" value="add" class="btn btn-primary"
+          style="font-size:28px;position:relative;left:250px"></br>
+        <a href="{% url 'getStock' %}">Graph</a></br>
+      </div></br>
+
+    </div>
+    <div class="card w-75 col-md-6">
+      <img src="/static/img/{{p.symb}}.png" alt="" style="height: 350px; width: 500px;">
+    </div>
+  </div>
+</form>
+{% endfor %}

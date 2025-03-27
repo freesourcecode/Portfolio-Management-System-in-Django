@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color: black">
+<nav  class="navbar navbar-inverse" style="background-color: green;">
+                                <div class="container-fluid">
+                                  <div class="navbar-header">
+                                    <a class="navbar-brand" style="color:white" href="#">PortFolio Manager</a>
+                                  </div>
+                                  <ul class="nav navbar-nav ">
+                                    <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                                    <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
+                                    <li><a href="{% url 'stock' %}"><i class="fa fa-area-chart"></i> Stock</a></li>
+                                    <li ><a href="{% url 'mystock' %}"><i class="fa fa-line-chart"></i> My Stocks</a></li>
+                                    <li ><a href="{% url 'know' %}"><i class="fa fa-book"></i> Know</a></li>
+                                    <li><a href="{% url 'about' %}"><i class="fa fa-info-circle"></i> About</a></li>
+                                    <li ><a href="{% url 'logout' %}"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    </ul>
+
+              </nav>
+ </body>
+  </html>
